@@ -7,6 +7,8 @@
 .nr-commentlist2 .cell:after{display: table;;content: '';clear: both;}
 .nr-wrap,.clearfix,.nr-prolist .cell,.nr-newlist .cells,.nr-commentlist2 .cell{zoom:1;}
 
+.TabPanel{display: none;}
+
 /* 边距 */
 .mb30{margin-bottom: 30px;}
 .mb40{margin-bottom: 40px;}
@@ -20,7 +22,7 @@
 /* 总体 */
 .nr-full{min-width: 960px;color: #6d6d6d;}
 .nr-wrap{width: 960px;margin:0 auto;color: #6d6d6d;}
-.nr-maincol{float: left;width: 622px;}
+.nr-maincol{float: left;width: 636px;}
 .nr-sidecol{float: right;width: 306px;}
 .nr-sidebox{margin-bottom: 20px;}
 
@@ -164,7 +166,7 @@
 .nr-impress .asking{text-align: center;margin-top: 20px;}
 
 /*******************
-	介绍
+	介绍 及 tab
 ********************/
 .nr-topnav{float: left;color: #593586;margin-bottom: 7px;}
 .nr-topnav .new{position: relative;top: -3px;}
@@ -176,6 +178,16 @@
 .nr-anintro .zealand{position: absolute;top: 325px;left: 330px;}
 .nr-anintro .safety{position: absolute;top: 608px;left: 0;text-align: right;width: 308px;}
 .nr-anintro .sustainable{position: absolute;top: 920px;left: 328px;}
+
+.nr-anvision{background: #fff;}
+.nr-anvision .text{padding: 25px 38px 50px;font-size: 16px;line-height: 26px;color: #4e287e;}
+
+.nr-ansuperiority{background: url(../images/nr-ansuperiority.png) #fff repeat-x;}
+.nr-ansuperiority .con{padding:25px 38px 37px;}
+.nr-ansuperiority dl{font-size: 16px;line-height: 24px;color: #6d6d6d;margin-bottom: 25px;}
+.nr-ansuperiority dt,.nr-ansuperiority dd{display: inline;}
+.nr-ansuperiority dt{color: #4e287e;font-weight: bold;}
+.nr-ansuperiority .img{margin: 0 -30px;text-align: center;position: relative;}
 
 /*******************
 	新闻
