@@ -102,12 +102,23 @@ function selectMod() {
 			handle = self.find('.val'),
 			handlCon = handle.find('span'),
 			list = self.find('.list'),
-			lis = list.find('li');
+			lis = list.find('li'),
+			place = handlCon.attr('placeholder'),
+			txt;
 		handle.click(function(){
 			list.toggle();
 		});
 		lis.click(function(){
-			handlCon.text($(this).text());
+			txt = $(this).text();
+			handlCon.text(txt);
+			if(place) {
+				if(place == txt){
+					handle.addClass('default');
+				} else {
+					handle.removeClass('default');
+				};
+				handle.removeClass('error');
+			}
 			list.hide();
 		});
 	})
@@ -137,7 +148,78 @@ function tabChange() {
 	})
 }
 
+// 验证表单
+function formValidate() {
+	var elem = $('#formValidate');
+	if(!elem.length) return;
+	var inputs = elem.find(':input'),
+		feignSelects = elem.find('.sex .val'),
+		btn = elem.find('.btn input'),
+		all = elem.find('[placeholder]'),
+		tel = elem.find('.tel input'),
+		reg = /^(13[\d]{9}|15[\d]{9}|18[\d]{9})$/,
+		txt;
 
+	// 点提交时
+	btn.click(function(){
+		var state = true;
+		all.each(function(){
+			var self = $(this),
+				txt = self.val() || self.text(),
+				placeVale = self.attr('placeholder');
+
+			if(!txt || txt == placeVale) {
+				if(self[0].nodeName == 'SPAN') {
+					self.parent().addClass('error');
+					self.text('选择内容');
+				} else {
+					self.addClass('error');
+					self.val('请填写内容');
+				};
+				state = false;
+			};
+			if(self[0] == tel[0] && !reg.test(txt)) {
+				state = false;
+				self.val('请正确填写手机号');
+				self.addClass('error');
+			}
+		});
+		// 这里如果state为true则说明全都通过验证，可以提交
+	});
+
+	// 为支持placeholder 添加click时删除.error 和清空内容
+	if('placeholder' in document.createElement('input')) {
+		inputs.click(function(){
+			var self = $(this);
+			if(self.hasClass('error')) {
+				self.removeClass('error');
+				self.val('');
+			};
+		});
+
+	// 不支持的用js实现全部
+	} else {
+		inputs.each(function(){
+			var self = $(this),
+				placeholder = self.attr('placeholder');
+
+			if(placeholder) {
+				self.val(placeholder).addClass('empty');
+			};
+			self.click(function(){
+				var worth = self.val();
+				if(worth == placeholder || self.hasClass('error')) {
+					self.val('').removeClass('empty error');
+				}
+			}).blur(function(){
+				var worth = self.val();
+				if(self.val() == placeholder || !worth) {
+					self.val(placeholder).addClass('empty');
+				}
+			})
+		});
+	}
+}
 
 
 $(function(){
@@ -145,4 +227,5 @@ $(function(){
 	faqSlide();
 	selectMod();
 	clientFeedBack();
+	formValidate();
 })

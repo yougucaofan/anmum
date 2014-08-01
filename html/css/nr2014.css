@@ -123,6 +123,8 @@
 .nr-select .list{position: absolute;top: 31px;left:0;width: 100%;background: #fff;line-height: 25px;max-height:150px;overflow-y:auto;display: none;}
 .nr-select .list li{cursor: pointer;text-indent: 10px;}
 .nr-select .list li:hover{background:#fafafa;}
+.nr-select .default span,.nr-select .empty{color: #999!important;}
+.nr-select .error,.nr-select .error span{color: #f00!important;}
 
 /****************************
   单个页面
