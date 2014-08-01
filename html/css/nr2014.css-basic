@@ -61,13 +61,12 @@
 
 /* 分页 */
 .nr-pager{height: 30px;line-height:24px;font-size: 12px;color: #666;margin-top: 20px;}
-.nr-pager a,.nr-pager .total, .nr-pager .current{float: left; vertical-align:middle;}
-.nr-pager a, .nr-pager .current{width: 24px;text-align: center;color: #4e287e;font-size: 14px;font-family: 'arial';margin-right: 2px;}
-.nr-pager a:hover,.nr-pager .current{background: url(../images/bg.png) -332px 0 no-repeat;color: #fff;text-decoration: none;}
-.nr-pager .prev,.nr-pager .next{background: url(../images/bg.png) -360px 0 no-repeat!important;text-align: left;text-indent: -20em;overflow: hidden;margin-right: 13px;}
+.nr-pager a,.nr-pager .total{float: left;}
+.nr-pager a{width: 24px;text-align: center;color: #4e287e;font-size: 14px;font-family: 'arial';margin-right: 2px;}
+.nr-pager a:hover,.nr-pager .active{background: url(../images/bg.png) -332px 0 no-repeat;color: #fff;text-decoration: none;}
+.nr-pager .pre,.nr-pager .next{background: url(../images/bg.png) -360px 0 no-repeat!important;text-align: left;text-indent: -20em;overflow: hidden;margin-right: 13px;}
 .nr-pager .next{background-position: -388px 0!important;}
-.nr-pager .first_page,
-.nr-pager .last_page{background: url(../images/bg.png) -419px 0 no-repeat!important;width: 59px;height: 30px;color: #fff;font-family:"Microsoft Yahei";margin: 0 15px 0 0;}
+.nr-pager .last{background: url(../images/bg.png) -419px 0 no-repeat!important;width: 59px;height: 30px;color: #fff;font-family:"Microsoft Yahei";margin: 0 17px 0 13px;}
 
 /* 评论列表(竖排) */
 .nr-commentlist,.nr-commentlist2{font-size: 14px;line-height: 21px;}
@@ -126,6 +125,7 @@
 .nr-select .list li:hover{background:#fafafa;}
 .nr-select .default span,.nr-select .empty{color: #999!important;}
 .nr-select .error,.nr-select .error span{color: #f00!important;}
+
 /****************************
   单个页面
   ****************************/
@@ -247,7 +247,6 @@
 .nr-expertqa .nr-select .tel{clear: both;background:url(../images/bg.png) -535px -561px no-repeat;height: 31px;}
 .nr-expertqa .nr-select .tel input{width: 246px;}
 .nr-expertqa .nr-select .btn{text-align: center;margin:0!important;}
-.nr-expertqa .nr-select .btn .faq_submit{background:url(../images/btn8.png) no-repeat;height:35px;width:98px;display:block;margin:0 auto; text-indent:-10000px;}
 
 .nr-expertqa .nr-impress{padding-top: 20px;padding-bottom: 20px;}
 .nr-search{background: #f1e7ff;border-bottom: 1px dotted #9e9aa3;padding-bottom: 8px;margin-bottom: 7px;}
@@ -265,33 +264,3 @@
 .nr-treasury{padding:16px 25px 0;position: relative;;float: right;height: 273px;background: url(../images/nr-treasury.png) repeat-x;width: 256px;}
 .nr-treasury .pic{position: absolute;bottom:0;left:0;}
 .nr-treasury .info{font-size: 12px;line-height: 18px;color: #6d6d6d;margin-top: 5px;}
-
-/*by mm*/
-.v3_mod_hp_slide_wrap,
-.mod_hp_slide,
-.mod_hp_slide .pic_box{height:340px;}
-
-.v3_line_spe_w960{height:50px; height:auto; line-height:50px; position:relative; padding:0; font-size:14px; color:#6d6d6d;}
-.v3_line_spe_w960 .hp_news{height:50px; position:relative; padding-right:110px; width:850px;}
-.v3_line_spe_w960 .hp_news a{color:#314891; margin-right:10px;}
-.v3_line_spe_w960 .hp_news span{position:absolute;right:0;color:#909090;font-size:12px;line-height:50px;top:0;}
-.v3_line_spe_w960 .hp_news .ctext{color:#6d6d6d;}
-.note_copy{color:#909090; font-size:15px; margin-bottom:40px; text-align:center;}
-
-.page_title h1 span.news{background: url(../images/nr2014_bgnewnav.png) no-repeat;width:164px; text-align:left; padding-left:10px;}
-
-.nr-advantage1 .nvideo{position:absolute;left:170px;top:233px;height:200px;width:300px;}
-.nr-advantage1 .nvideo a{display:block;}
-.mod_fnt_micro_experience{margin-top:0;}
-
-.fw_banner .pic .inner_link{position:absolute;width:960px; left:50%; margin-left:-480px; top:0; height:347px;}
-.fw_banner .pic .inner_link a.l_tmall{position:absolute;top:162px;left:370px;width:175px;height:40px;}
-.fw_banner .pic .inner_link a.l_insite{position:absolute;top:162px;left:553px;height:40px;width:158px;}
-.fw_banner .pic .inner_link a.l_zs{position:absolute;top:222px;left:212px;height:100px;width:100px;}
-
-#news-detail h1{color:#666;font-size:22px;text-align:center;}
-#news-detail p{color:#666;font-size:14px;margin:0 0 25px;}
-#news-detail p.info{line-height:48px;border-bottom:1px dotted #a09fa2;text-align:center;}
-#news-detail .back{margin-top:20px;}
-#news-detail .back a{background: url(../images/btn_go_back.png) no-repeat;display:block; height:29px; width:109px; text-indent:-10000px;}
-#news-detail .topback{margin-top:0;}
